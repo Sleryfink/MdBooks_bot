@@ -35,7 +35,7 @@ Version V2 is in development, which will include direct file sending instead of 
 
 ## 📃 License
 
-This project is licensed under the [GNU General Public License v3.0](https://www.gnu.org/licenses/gpl-3.0.html).
+This project is licensed under the [GNU General Public License v3.0](https://github.com/SFmindMAP/MdBooks_bot/blob/main/LICENSE).
 
 ## 🔗 Bot Link
 
