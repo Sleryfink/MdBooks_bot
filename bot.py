@@ -21,7 +21,7 @@ def handle_start(message):
 
 @bot.message_handler(commands=['instruction'])
 def start(message):
-    gif_url = 'https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExaGJheWJoMzE1d3ZuZXRsbjgzNGZpemdzN3R2N2c4NzRtYmt0NGY2byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/LGA6seGc5tTX13bgAT/source.gif'
+    gif_url = 'https://i.giphy.com/media/v1.Y2lkPTc5MGI3NjExeWQzbW9oaDRmaXA2bGJlemZqa2xrOHZ0dDRncnV2dXF3bDV3bmRicCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/ITow4I6fOLsMykudYh/giphy.gif'
     bot.send_animation(message.chat.id, gif_url, caption="How to use")
 
 @bot.inline_handler(lambda query: True)
