@@ -10,7 +10,7 @@
 
 <div align="center">
   <img src="https://media2.giphy.com/media/v1.Y2lkPTc5MGI3NjExNHJxa3djM2Z0cmYxZm84Nnpjam9jdHo5aWlsNGUyN3F1MXlxanFibCZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/NATRXztF8MDMSOnNaw/giphy.gif" alt="Bot Demo" style="border-radius: 5px;">
-  <p align="center">This repository contains the open source code of a Telegram bot capable of sending school books via inline mode directly to chat. Developed in Python, this bot provides quick access to downloading educational books for schoolchildren of different grades in Moldova.</p>
+  <p align="center">This bot provides quick access to downloading educational books for schoolchildren of different grades in Moldova.</p>
 </div>
 
 
