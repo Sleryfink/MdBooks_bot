@@ -44,7 +44,7 @@ def query_text(query):
             elif int(class_number) == 15:
                 class_info = "Group: Manuale vechi"
             else:
-                class_info = f"Clasa: {class_number}"
+                class_info = f"*Clasa:* {class_number}"
         else:
             class_info = "неверный номер класса"
 
@@ -68,9 +68,15 @@ def query_text(query):
                 file_name = result['NAME']
                 download_link = result['LINK']
 
-                message_text = f'Book: {file_name}\nURL: {download_link}\n{class_info}'
+                message_text = f'*Book:* `{file_name}`\n{class_info}'
 
                 result_id = uuid.uuid4().hex
+                keyboard = telebot.types.InlineKeyboardMarkup()
+                download_button = telebot.types.InlineKeyboardButton(
+                    text="Download 📥",
+                    url=download_link
+                )
+                keyboard.add(download_button)
 
                 article = telebot.types.InlineQueryResultArticle(
                     id=result_id,
@@ -79,6 +85,7 @@ def query_text(query):
                         message_text=message_text,
                         parse_mode='Markdown'
                     ),
+                    reply_markup=keyboard,
                     url=download_link,
                     hide_url=True
                 )
@@ -89,13 +96,13 @@ def query_text(query):
             print('Ошибка при парсинге')
 
     # history
-    #user_id = query.from_user.id  # get user ID
-    #user_name = query.from_user.username  # get nikname if exist
-    #user_info = user_name if user_name else f"User ID: {user_id}"
-    #print(f"{user_info} отправил запрос: {text}")
-    #import datetime
-    # Save the output to a text file with the current date and time
-    #with open('output.txt', 'a') as f:
+    # user_id = query.from_user.id  # get user ID
+    # user_name = query.from_user.username  # get nikname if exist
+    # user_info = user_name if user_name else f"User ID: {user_id}"
+    # print(f"{user_info} отправил запрос: {text}")
+    # import datetime
+    # # Save the output to a text file with the current date and time
+    # with open('output.txt', 'a') as f:
     #    f.write(f"{datetime.datetime.now()} - {user_info} отправил запрос: {text}\n")
 
 bot.infinity_polling()
