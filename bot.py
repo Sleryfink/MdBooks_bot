@@ -11,7 +11,7 @@ data = {}
 def update_data():
     global data
     while True:
-        data = t.parse_info('https://ctice.gov.md/manuale-scolare/')
+        data = get_book_list.parse_info('https://ctice.gov.md/manuale-scolare/')
         time.sleep(300)
 
 threading.Thread(target=update_data).start()
